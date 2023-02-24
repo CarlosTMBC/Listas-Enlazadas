@@ -12,6 +12,18 @@ public class Lista {
         else
         {
             nodoNuevo.siguiente = primero;
+            primero = nodoNuevo;
+        }
+    }
+    
+    public void ListarNodo()
+    {
+        Nodo Auxiliar;
+        Auxiliar = primero;
+        while(Auxiliar!=null)
+        {
+            System.out.println(Auxiliar.getDato());
+            Auxiliar = Auxiliar.siguiente;
         }
     }
 }
