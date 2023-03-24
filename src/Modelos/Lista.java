@@ -16,14 +16,17 @@ public class Lista {
         }
     }
     
-    public void ListarNodo()
+    public String ListarNodo()
     {
         Nodo Auxiliar;
         Auxiliar = primero;
+        String Cadena = "";
         while(Auxiliar!=null)
         {
-            System.out.println(Auxiliar.getDato());
+            Cadena = Cadena + Auxiliar.getDato() + "\n" ;
             Auxiliar = Auxiliar.siguiente;
         }
+        return Cadena;
+        
     }
 }

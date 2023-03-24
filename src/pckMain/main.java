@@ -5,7 +5,9 @@
  */
 package pckMain;
 
+import Controladores.NodoController;
 import Modelos.Lista;
+import Vistas.frmPrincipal;
 
 /**
  *
@@ -13,10 +15,8 @@ import Modelos.Lista;
  */
 public class main {
     public static void main(String[] args) {
+        frmPrincipal VistaPrincipal = new frmPrincipal();
         Lista nuevaLista = new Lista();
-        nuevaLista.InsertarNodo(10);
-        nuevaLista.InsertarNodo(20);
-        nuevaLista.InsertarNodo(30);
-        nuevaLista.ListarNodo();
+        NodoController Controlador = new NodoController(VistaPrincipal,nuevaLista);
     }
 }
